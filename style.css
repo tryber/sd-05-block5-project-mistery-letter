@@ -2,13 +2,27 @@ body {
   text-align: center;
 }
 
+span {
+  cursor: pointer;
+  user-select: none;
+}
+
+.carta {
+  display: flex;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .counter {
   display: inline;
+  padding: 2%;
+  font-weight: 700;
 }
 
 .newspaper {
   background-color: antiquewhite;
-  font-family: "Times New Roman", Times, serif;
+  font-family: 'Times New Roman', Times, serif;
   font-weight: 700;
 }
 
