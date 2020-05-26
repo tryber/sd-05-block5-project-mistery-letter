@@ -5,12 +5,13 @@ body {
 .newspaper {
   background-color: antiquewhite;
   font-family: Times New Roman, Times, serif;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .magazine1 {
   background-color: teal;
   color: white;
+  font-family: Times New Roman, Times, serif;
   font-weight: 900;
   text-transform: uppercase;
 }
@@ -43,6 +44,10 @@ body {
 
 .rotateright {
   transform: rotate(5deg);
+}
+
+.skewleft {
+  transform: skewX(10deg);
 }
 
 .skewright {
