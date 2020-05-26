@@ -48,3 +48,7 @@ body {
 .skewright {
   transform: skewX(-10deg);
 }
+
+.carta {
+  margin: auto 5px;
+}
