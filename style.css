@@ -1,3 +1,13 @@
+span, button {
+  cursor: pointer;
+}
+
+p, h4 {
+  text-align: center;
+  margin:50px;
+  font-size: 1.2em;
+}
+
 #carta-texto {
   width: 700px;
   margin-left: 25%;
@@ -54,9 +64,9 @@
 }
 
 .skewleft {
-  transform: skewX(-10deg);
+  transform: skewX(10deg);
 }
 
 .skewright {
-  transform: skewY(10deg);
+  transform: skewY(-10deg);
 }

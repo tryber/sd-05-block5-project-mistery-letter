@@ -5,6 +5,7 @@ const skew = ["skewleft", "skewright"];
 const fatherText = document.getElementById("carta-gerada");
 const inputText = document.getElementById("carta-texto");
 const inputBut = document.getElementById("criar-carta");
+const contadorP = document.getElementById('contador');
 
 function geraRandom(n) {
   const random = Math.floor(Math.random() * n);
@@ -40,8 +41,20 @@ function splitter() {
   removeOldSpan();
   const texto = inputText.value;
   const textoSplit = texto.split(" ");
+  let counter = 0
   for (let i = 0; i < textoSplit.length; i++) {
     geraSpan(textoSplit[i]);
+    counter += 1
   }
+  contadorP.innerText = counter
 }
+
+function mudarAoClick(event) {
+  const target = event.target;
+  target.className = geraEstilo();
+}
+
 inputBut.addEventListener("click", splitter);
+fatherText.addEventListener("click", mudarAoClick);
+
+
