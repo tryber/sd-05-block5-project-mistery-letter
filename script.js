@@ -5,10 +5,10 @@ const cardStyles = {
   inclinations: ['skewleft', 'skewright'],
 };
 const buildStyle = function () {
-  const style = cardStyles.styles[parseInt(Math.random() * cardStyles.styles.length)];
-  const size = cardStyles.sizes[parseInt(Math.random() * cardStyles.sizes.length)];
-  const rot = cardStyles.rotations[parseInt(Math.random() * cardStyles.rotations.length)];
-  const skew = cardStyles.inclinations[parseInt(Math.random() * cardStyles.inclinations.length)];
+  const style = cardStyles.styles[Math.floor(Math.random() * cardStyles.styles.length)];
+  const size = cardStyles.sizes[Math.floor(Math.random() * cardStyles.sizes.length)];
+  const rot = cardStyles.rotations[Math.floor(Math.random() * cardStyles.rotations.length)];
+  const skew = cardStyles.inclinations[Math.floor(Math.random() * cardStyles.inclinations.length)];
   return `${style} ${size} ${rot} ${skew} carta`;
 };
 const buildCards = function () {
