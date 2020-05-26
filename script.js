@@ -1,3 +1,6 @@
+[].__proto__.getRandom = function () {
+  return this[Math.floor(Math.random() * this.length)];
+};
 const cardStyles = {
   styles: ['newspaper', 'magazine1', 'magazine2'],
   sizes: ['medium', 'big', 'reallybig'],
@@ -5,11 +8,11 @@ const cardStyles = {
   inclinations: ['skewleft', 'skewright'],
 };
 const buildStyle = function () {
-  const style = cardStyles.styles[Math.floor(Math.random() * cardStyles.styles.length)];
-  const size = cardStyles.sizes[Math.floor(Math.random() * cardStyles.sizes.length)];
-  const rot = cardStyles.rotations[Math.floor(Math.random() * cardStyles.rotations.length)];
-  const skew = cardStyles.inclinations[Math.floor(Math.random() * cardStyles.inclinations.length)];
-  return `${style} ${size} ${rot} ${skew} carta`;
+  const style = cardStyles.styles.getRandom();
+  const size = cardStyles.sizes.getRandom();
+  const rot = cardStyles.rotations.getRandom();
+  const skew = cardStyles.inclinations.getRandom();
+  return `${style} ${size} ${rot} ${skew}`;
 };
 const buildCards = function () {
   const letter = document.getElementById('carta-texto').value.split(' ');
