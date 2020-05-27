@@ -70,6 +70,7 @@ function criarCarta() {
   atribuirClasseTamanho();
   atribuirClasseRotacao();
   atribuirClasseInclinacao();
+  document.getElementById('carta-contador').innerText = qtdePalavras;
 }
 botaoGerar.addEventListener('click', criarCarta);
 
