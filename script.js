@@ -5,7 +5,7 @@ const skew = ["skewleft", "skewright"];
 const fatherText = document.getElementById("carta-gerada");
 const inputText = document.getElementById("carta-texto");
 const inputBut = document.getElementById("criar-carta");
-const contadorP = document.getElementById('contador');
+const contadorP = document.getElementById('carta-contador');
 
 function geraRandom(n) {
   const random = Math.floor(Math.random() * n);
