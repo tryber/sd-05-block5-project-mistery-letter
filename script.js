@@ -24,7 +24,7 @@ function gerarCarta() {
     for (let index = 0; index < splitInputCartaTextoValue.length; index++) {
       const element = splitInputCartaTextoValue[index];
       let span = document.createElement('span');
-      span.innerHTML = `${element} `; 
+      span.innerHTML = `${element}`; 
       let classLibrary = {
         1: 'newspaper',
         2: 'magazine1',
@@ -37,7 +37,7 @@ function gerarCarta() {
         10: 'skewleft',
         11: 'skewright',
       }
-      let randomClass = classLibrary[(Math.ceil(Math.random()*10)+1)]
+      let randomClass = classLibrary[(Math.ceil(Math.random()*11))]
       span.className = randomClass;
       outputCartaGerada.appendChild(span);           
     }    
