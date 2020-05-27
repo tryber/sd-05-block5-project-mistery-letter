@@ -35,7 +35,7 @@ function gerarCarta() {
       10: 'skewright',
     };
 
-    const randomClass = classLibrary[Math.ceil(Math.random() * 11)];
+    const randomClass = classLibrary[Math.ceil(Math.random() * 10)];
     span.className = randomClass;
     outputCartaGerada.appendChild(span);
   }
