@@ -28,7 +28,7 @@ function atribuirClasseEstilo() {
     // Sorteio Estilos
     const numEstilo = Math.floor(Math.random() * 3);
     const estilo = classesEstilos[numEstilo];
-    let spanPalavra = document.querySelectorAll('#carta-gerada span');
+    const spanPalavra = document.querySelectorAll('#carta-gerada span');
     spanPalavra[i].classList.add(estilo);
   }
 }
@@ -38,7 +38,7 @@ function atribuirClasseTamanho() {
     // Sorteio Tamanho
     const numTamanho = Math.floor(Math.random() * 3);
     const tamanho = classesTamaho[numTamanho];
-    let spanPalavra = document.querySelectorAll('#carta-gerada span');
+    const spanPalavra = document.querySelectorAll('#carta-gerada span');
     spanPalavra[i].classList.add(tamanho);
   }
 }
@@ -48,7 +48,7 @@ function atribuirClasseRotacao() {
     // Sorteio Rotacao
     const numRotacao = Math.floor(Math.random() * 2);
     const rotacao = classesRotacao[numRotacao];
-    let spanPalavra = document.querySelectorAll('#carta-gerada span');
+    const spanPalavra = document.querySelectorAll('#carta-gerada span');
     spanPalavra[i].classList.add(rotacao);
   }
 }
@@ -58,7 +58,7 @@ function atribuirClasseInclinacao() {
     // Sorteio Inclinação
     const numInclinacao = Math.floor(Math.random() * 2);
     const inclinacao = classesInclinacao[numInclinacao];
-    let spanPalavra = document.querySelectorAll('#carta-gerada span');
+    const spanPalavra = document.querySelectorAll('#carta-gerada span');
     spanPalavra[i].classList.add(inclinacao);
   }
 }
@@ -72,3 +72,14 @@ function criarCarta() {
   atribuirClasseInclinacao();
 }
 botaoGerar.addEventListener('click', criarCarta);
+
+const carta = document.getElementById('carta-gerada');
+function mudarClasses(e) {
+  const spanPalavra = e.target;
+  spanPalavra.className = '';
+  atribuirClasseEstilo();
+  atribuirClasseTamanho();
+  atribuirClasseRotacao();
+  atribuirClasseInclinacao();
+}
+carta.addEventListener('click', mudarClasses);
