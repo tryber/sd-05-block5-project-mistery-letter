@@ -1,25 +1,8 @@
-/* // 5 - Crie a classe newspaper.
-// Pontos importantes:
-
-// * Defina as propriedades:
-//   - `background-color` com o valor `antiquewhite`
-//   - `font-family` com o valor `Times New Roman`
-//   - `font-weight` com o valor `bold` */
-
 .newspaper {
   background-color: antiquewhite;
   font-family: 'Times New Roman', Times, serif;
   font-weight: bold;
 }
-
-/* // 6 - Crie a classe magazine1.
-// Pontos importantes:
-// * Defina as propriedades:
-//   - `background-color` com o valor `teal`
-//   - `color` com o valor `white`
-//   - `font-family` com o valor `Verdana`
-//   - `font-weight` com o valor `900`
-//   - `text-transform` com o valor `uppercase` */
 
 .magazine1 {
   background-color: teal;
@@ -29,14 +12,6 @@
   text-transform: uppercase;
 }
 
-/* // 7 - Crie a classe magazine2.
-// Pontos importantes:
-// * Defina as propriedades:
-//   - `background-image` com a imagem `images/pink-pattern.png`
-//   - `color` com o valor `fuchsia`
-//   - `font-family` com o valor `Verdana`
-//   - `font-weight` com o valor `900` */
-
 .magazine2 {
   background-image: 'images/pink-pattern.png';
   color: fuchsia;
@@ -44,47 +19,21 @@
   font-weight: 900;
 }
 
-/* // 8 - Crie a classe medium.
-// Pontos importantes:
-
-// * Defina as propriedades:
-//   - `font-size` com o valor `20px`
-//   - `padding` com o valor `8px` */
 
 .medium {
   font-size: 20px;
   padding: 8px;
 }
 
-/* // 9 - Crie a classe big.
-// Pontos importantes:
-
-// * Defina as propriedades:
-//   - `font-size` com o valor `30px`
-//   - `padding` com o valor `10px` */
-
 .big {
   font-size: 30px;
   padding: 10px;
 }
 
-/* // 10 - Crie a classe reallybig.
-// Pontos importantes:
-
-// * Defina as propriedades:
-//   - `font-size` com o valor `40px`
-//   - `padding` com o valor `15px` */
-
 .reallybig {
   font-size: 40px;
   padding: 15px;
 }
-
-/* // 11 - Crie a classe rotateleft.
-// Pontos importantes:
-
-// * Defina as propriedades:
-//   - `transform` com o valor `rotate(-5deg)` */
 
 .rotateleft {
   transform: rotate(-5deg);
@@ -93,42 +42,11 @@
 .rotateright {
   transform: rotate(5deg);
 }
-/* // 12 - Crie a classe rotateright.
-// Pontos importantes:
-// * Defina as propriedades:
-//   - `transform` com o valor `rotate(5deg)` */
 
-/* // 13 - Crie a classe skewleft.
-// Pontos importantes:
-
-// * Defina as propriedades:
-//   - `transform` com o valor `skewX(10deg)`; */
 .skewleft {
   transform: skewX(10deg);
 }
 
-/* // 14 - Crie a classe skewright.
-// Pontos importantes:
-
-// * Defina as propriedades:
-//   - `transform` com o valor `skewX(-10deg)`; */
 .skewright {
   transform: skewX(-10deg);
 }
-
-/* // 15 - Adicione as classes de forma aleatória a fim de estilizar as palavras.
-// Pontos importantes:
-
-// * As classes devem ser adicionadas às tags `span` de forma **aleatória**.
-// * Sempre adicione mais de uma classe em uma palavra.
-// * Utilize as classes:
-//   - `newspaper`, `magazine1`, `magazine2` (Grupo estilo)
-//   - `medium`, `big`, `reallybig` (Grupo tamanho)
-//   - `rotateleft`, `rotateright` (Grupo rotação)
-//   - `skewleft`, `skewright` (Grupo inclinação)
-
-//   Não é necessário utilizar classes de todos os grupos em uma palavra,
-//    mas **não**
-//    utilize mais de uma classe do mesmo grupo.
-//   Ou seja, se você utilizar as classes `magazine1` e `skewright`
-//   em uma palavra, as classes `newspaper`, `magazine2`, `skelef */
