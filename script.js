@@ -17,6 +17,8 @@ button.addEventListener('click', function () {
     randomClasses(span);
     letter.appendChild(span);
   }
+  // add the letter number of words to the paragraph carta-contador
+  document.getElementById('carta-contador').innerHTML += words.length;
 });
 
 // add possibility of changing the style of a letter
