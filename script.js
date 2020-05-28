@@ -4,6 +4,14 @@ const sizeGroup = ['medium', 'big', 'reallybig'];
 const rotationGroup = ['rotateleft', 'rotateright'];
 const inclinationGroup = ['skewleft', 'skewright'];
 
+// function that applies random classes
+function randomClasses(element) {
+  element.classList.add(styleGroup[Math.floor(Math.random() * 3)]);
+  element.classList.add(sizeGroup[Math.floor(Math.random() * 3)]);
+  element.classList.add(rotationGroup[Math.floor(Math.random() * 2)]);
+  element.classList.add(inclinationGroup[Math.floor(Math.random() * 2)]);
+}
+
 // create span tags and add it to the p tag once the button is clicked
 const button = document.getElementById('criar-carta');
 const text = document.querySelector('input');
@@ -33,11 +41,3 @@ letter.addEventListener('click', function (event) {
     randomClasses(word);
   }
 });
-
-// function that applies random classes
-function randomClasses (element) {
-  element.classList.add(styleGroup[Math.floor(Math.random() * 3)]);
-  element.classList.add(sizeGroup[Math.floor(Math.random() * 3)]);
-  element.classList.add(rotationGroup[Math.floor(Math.random() *2)]);
-  element.classList.add(inclinationGroup[Math.floor(Math.random()* 2)]);
-}
