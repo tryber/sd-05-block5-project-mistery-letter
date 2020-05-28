@@ -20,10 +20,16 @@ button.addEventListener('click', function () {
 });
 
 // add possibility of changing the style of a letter
+let counter = 0;
 letter.addEventListener('click', function (event) {
-  const word = event.target;
-  word.className = '';
-  randomClasses(word);
+  counter += 1;
+  if (counter > 3) {
+    alert('Você atingiu o número máximo de 3 mudanças. Por favor, recarregue a página.');
+  } else {
+    const word = event.target;
+    word.className = '';
+    randomClasses(word);
+  }
 });
 
 // function that applies random classes
