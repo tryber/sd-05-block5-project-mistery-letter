@@ -1,3 +1,20 @@
+body {
+  text-align: center;
+}
+
+input {
+  width: 300px;
+  margin-right: 10px;
+}
+
+h1 {
+  margin-bottom: 60px;
+}
+
+p {
+  margin-top: 100px;
+}
+
 .newspaper {
   background-color: antiquewhite;
   font-family: Times New Roman;
@@ -49,4 +66,3 @@
 .skewright {
   transform: skewX(-10deg);
 }
-

@@ -5,7 +5,7 @@ const rotationGroup = ['rotateleft', 'rotateright'];
 const inclinationGroup = ['skewleft', 'skewright'];
 
 // create span tags and add it to the p tag once the button is clicked
-const button = document.querySelector('button');
+const button = document.getElementById('criar-carta');
 const text = document.querySelector('input');
 const letter = document.getElementById('carta-gerada');
 
@@ -14,10 +14,22 @@ button.addEventListener('click', function () {
   for (let i = 0; i < words.length; i += 1) {
     const span = document.createElement('span');
     span.innerHTML = words[i];
-    span.classList.add(styleGroup[Math.floor(Math.random() * 3)]);
-    span.classList.add(sizeGroup[Math.floor(Math.random() * 3)]);
-    span.classList.add(rotationGroup[Math.floor(Math.random() * 2)]);
-    span.classList.add(inclinationGroup[Math.floor(Math.random() * 2)]);
+    randomClasses(span);
     letter.appendChild(span);
   }
 });
+
+// add possibility of changing the style of a letter
+letter.addEventListener('click', function (event) {
+  const word = event.target;
+  word.className = '';
+  randomClasses(word);
+});
+
+// function that applies random classes
+function randomClasses (element) {
+  element.classList.add(styleGroup[Math.floor(Math.random() * 3)]);
+  element.classList.add(sizeGroup[Math.floor(Math.random() * 3)]);
+  element.classList.add(rotationGroup[Math.floor(Math.random() *2)]);
+  element.classList.add(inclinationGroup[Math.floor(Math.random()* 2)]);
+}
