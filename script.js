@@ -36,10 +36,12 @@ function setSpan(string) {
 }
 
 function createLetter() {
-  let word = cartaTextoInput.value.split(" ");
+  let word = cartaTextoInput.value.split(' ');
   for (let index = 0; index < word.length; index += 1) {
     setSpan(word[index]);
   }
 }
+
+
 
 cartaTextoButton.addEventListener("click", createLetter);
