@@ -16,14 +16,7 @@ function setStyle() {
   let grupoTamanho = tamanho[setRandom(3)];
   let grupoRotacao = rotacao[setRandom(2)];
   let grupoInclinacao = inclinacao[setRandom(2)];
-  let classeDefinida =
-    grupoEstilo +
-    " " +
-    grupoTamanho +
-    " " +
-    grupoRotacao +
-    " " +
-    grupoInclinacao;
+  let classeDefinida = grupoEstilo+" "+grupoTamanho+" "+grupoRotacao+" "+grupoInclinacao;
   return classeDefinida;
 }
 
