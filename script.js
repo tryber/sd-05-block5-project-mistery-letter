@@ -32,18 +32,16 @@ function imprimeCarta() {
     const randomTamanho = Math.floor(Math.random() * 3);
     const randomRotacao = Math.floor(Math.random() * 2);
     const randomInclinacao = Math.floor(Math.random() * 2);
-    criaTagSpan.className += grupoEstilo[randomEstilo] + ' ' + grupoTamanho[randomTamanho] +  ' ' + grupoRotacao[randomRotacao] + ' ' + grupoInclinacao[randomInclinacao];
+    criaTagSpan.className += grupoEstilo[randomEstilo] + ' ' + grupoTamanho[randomTamanho] + ' ' + grupoRotacao[randomRotacao] + ' ' + grupoInclinacao[randomInclinacao];
     criaTagSpan.innerText = vetorAuxiliar[i];
     ultimoParagrafo.appendChild(criaTagSpan);
   }
   const escreveContador = document.getElementById('carta-contador');
-  escreveContador.innerText = 'Esta carta possui ' + vetorAuxiliar.length + ' palavras';
+  escreveContador.innerText = vetorAuxiliar.length;
   const pegaTodasPalavras = document.getElementById('carta-gerada').childNodes;
-  console.log(pegaTodasPalavras);
 
   if (pegaTodasPalavras.length !== 0) {
     pegaTodasPalavras.forEach((item) => {
-      console.log(item);
       item.addEventListener('click', monitoraCarta);
     });
   }
