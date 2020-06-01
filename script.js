@@ -3,6 +3,7 @@ const posBotaoCriarCarta = document.getElementById('criar-carta');
 function imprimeCarta(){
   const conteudoTexto = document.getElementById('carta-texto').value;
   const vetorAuxiliar = conteudoTexto.split(" ");
+  console.log(vetorAuxiliar)
   const ultimoParagrafo = document.getElementById('carta-gerada');
   console.log(ultimoParagrafo);
 
