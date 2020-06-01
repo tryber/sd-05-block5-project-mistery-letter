@@ -1,7 +1,7 @@
-const grupoEstilo = [ 'newspaper', 'magazine1', 'magazine2' ];
-const grupoTamanho = [ 'medium', 'big', 'reallybig'];
-const grupoRotacao = [ 'rotateleft', 'rotateright'];
-const grupoInclinacao = [ 'skewleft', 'skewright'];
+const grupoEstilo = ['newspaper', 'magazine1', 'magazine2'];
+const grupoTamanho = ['medium', 'big', 'reallybig'];
+const grupoRotacao = ['rotateleft', 'rotateright'];
+const grupoInclinacao = ['skewleft', 'skewright'];
 
 const posBotaoCriarCarta = document.getElementById('criar-carta');
 
@@ -27,6 +27,32 @@ function imprimeCarta() {
     criaTagSpan.innerText = vetorAuxiliar[i];
     ultimoParagrafo.appendChild(criaTagSpan);
   }
+  const escreveContador = document.getElementById('carta-contador');
+  escreveContador.innerText = 'Esta carta possui ' + vetorAuxiliar.length + ' palavras';
+  const pegaTodasPalavras = document.getElementById('carta-gerada').childNodes;
+  console.log(pegaTodasPalavras);
+
+  if (pegaTodasPalavras.length !== 0) {
+    pegaTodasPalavras.forEach((item) => {
+      console.log(item);
+      item.addEventListener('click', monitoraCarta);
+    });
+  }
 }
 
-posBotaoCriarCarta.addEventListener('click',imprimeCarta);
+posBotaoCriarCarta.addEventListener('click', imprimeCarta);
+
+function monitoraCarta(event) {
+  const randomEstilo = Math.floor(Math.random() * 3);
+  const randomTamanho = Math.floor(Math.random() * 3);
+  const randomRotacao = Math.floor(Math.random() * 2);
+  const randomInclinacao = Math.floor(Math.random() * 2);
+  event.target.className = '';
+  event.target.className += grupoEstilo[randomEstilo];
+  event.target.className += ' ';
+  event.target.className += grupoTamanho[randomTamanho];
+  event.target.className += ' ';
+  event.target.className += grupoRotacao[randomRotacao];
+  event.target.className += ' ';
+  event.target.className += grupoInclinacao[randomInclinacao];
+}
