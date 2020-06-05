@@ -32,7 +32,7 @@ function vamos() {
     elemento.innerHTML = texto[palavras];
     document.getElementById("carta-gerada").appendChild(elemento);
   }
-  document.getElementById("carta-contador").innerText = palavras; //document.getElementById("carta-gerada").children.length;
+  document.getElementById("carta-contador").innerText = texto.length; //document.getElementById("carta-gerada").children.length;
   return "ok";
 }
 const botao = document.getElementById("criar-carta");
