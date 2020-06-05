@@ -32,6 +32,9 @@ function vamos() {
     elemento.innerHTML = texto[palavras];
     document.getElementById("carta-gerada").appendChild(elemento);
   }
+  document.getElementById("carta-contador").innerText = document.getElementById(
+    "carta-gerada"
+  ).children.length;
   return "ok";
 }
 const botao = document.getElementById("criar-carta");
