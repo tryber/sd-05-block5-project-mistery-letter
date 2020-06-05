@@ -19,14 +19,9 @@ function sorteio() {
 
 function vamos() {
   let texto = document.getElementById("carta-texto").value;
-
-  console.log(texto);
   texto = texto.split(" ");
-
-  console.log(texto);
   for (let palavras = 0; palavras < texto.length; palavras++) {
     const classes = sorteio();
-    console.log(classes);
     const elemento = document.createElement("span");
     elemento.className = classes;
     elemento.innerHTML = texto[palavras];
@@ -40,7 +35,9 @@ botao.addEventListener("click", vamos);
 
 const cartaGerada = document.getElementById("carta-gerada");
 cartaGerada.addEventListener("click", function (evento) {
-  evento.target.className = "";
-  const classes = sorteio();
-  evento.target.className = classes;
+  if (evento.target.tagName.indexOf("SPAN") >= 0) {
+    evento.target.className = "";
+    const classes = sorteio();
+    evento.target.className = classes;
+  }
 });
