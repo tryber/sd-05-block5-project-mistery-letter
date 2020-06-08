@@ -7,7 +7,7 @@ let rotacao = ["rotateleft", "rotateright"];
 let inclinacao = ["skewleft", "skewright"];
 
 function setRandom(number) {
-  let random = Math.floor(Math.random() * number);
+  let random = Math.floor(Math.random() * (number - 1 ) + 0.5);
   return random;
 }
 
