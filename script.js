@@ -1,6 +1,7 @@
 let cartaTextoInput = document.getElementById("carta-texto");
 let cartaTextoButton = document.getElementById("criar-carta");
 let pWords = document.getElementById("carta-gerada");
+let pCounter = document.getElementById("carta-contador");
 let estilo = ["newspaper", "magazine1", "magazine2"];
 let tamanho = ["medium", "big", "reallybig"];
 let rotacao = ["rotateleft", "rotateright"];
@@ -30,6 +31,7 @@ function setSpan(string) {
 
 function createLetter() {
   let word = cartaTextoInput.value.split(' ');
+  pCounter.innerText = word.length;
   for (let index = 0; index < word.length; index += 1) {
     setSpan(word[index]);
   }
