@@ -12,7 +12,11 @@ const inclinacao = ['skewleft', 'skewright'];
 const ranNum = (n) => Math.floor(Math.random() * n);
 
 function randomClasses() {
-  return `${estilo[ranNum(3)]} ${tamanho[ranNum(3)]} ${rotacao[ranNum(2)]} ${inclinacao[ranNum(2)]}`;
+  const ramStyle = estilo[ranNum(estilo.length)];
+  const ramSize = tamanho[ranNum(tamanho.length)];
+  const ramRotate = rotacao[ranNum(rotacao.length)];
+  const ramAngle = inclinacao[ranNum(inclinacao.length)];
+  return `${ramStyle} ${ramSize} ${ramRotate} ${ramAngle}`;
 }
 
 function removeSpan() {
@@ -34,9 +38,9 @@ function printLetter() {
     const spanWord = document.createElement('span');
     spanWord.innerHTML = word;
     spanWord.className = randomClasses();
+    spanWord.addEventListener('click', changeStyle);
     letterMade.appendChild(spanWord);
   });
 }
 
 getLetter.addEventListener('click', printLetter);
-letterMade.addEventListener('click', changeStyle);
