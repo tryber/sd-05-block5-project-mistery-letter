@@ -14,7 +14,18 @@ function randomClasses() {
   return `${estilo[ranNum(3)]} ${tamanho[ranNum(3)]} ${rotacao[ranNum(2)]} ${inclinacao[ranNum(2)]}}`;
 }
 
+function removeSpan() {
+  const oldText = document.getElementsByTagName('span');
+  Array.from(oldText).forEach((span) => letterMade.removeChild(span));
+}
+
+function changeStyle(event) {
+  const wordTarget = event.target;
+  wordTarget.className = randomClasses();
+}
+
 function printLetter() {
+  removeSpan();
   const letterText = letterInput.value;
   const stringsArr = letterText.split(' ');
   return stringsArr.forEach((word) => {
@@ -26,3 +37,4 @@ function printLetter() {
 }
 
 getLetter.addEventListener('click', printLetter);
+letterMade.addEventListener('click', changeStyle);
