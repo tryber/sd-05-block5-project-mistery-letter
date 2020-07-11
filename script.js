@@ -12,7 +12,7 @@ const inclinacao = ['skewleft', 'skewright'];
 const ranNum = (n) => Math.floor(Math.random() * n);
 
 function randomClasses() {
-  return `${estilo[ranNum(3)]} ${tamanho[ranNum(3)]} ${rotacao[ranNum(2)]} ${inclinacao[ranNum(2)]}}`;
+  return `${estilo[ranNum(3)]} ${tamanho[ranNum(3)]} ${rotacao[ranNum(2)]} ${inclinacao[ranNum(2)]}`;
 }
 
 function removeSpan() {
