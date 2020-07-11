@@ -1,5 +1,5 @@
 .head-title {
-  font-family: 'Galada', cursive;
+  font-family: Galada, cursive;
   letter-spacing: 1.9px;
   text-align: center;
 }
@@ -8,6 +8,6 @@
   text-align: center;
 }
 
-.letter-preview {
+/* .letter-preview {
 
-}
+} */
