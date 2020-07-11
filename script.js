@@ -1,6 +1,7 @@
 const getLetter = document.getElementById('criar-carta');
 const letterMade = document.getElementById('carta-gerada');
 const letterInput = document.getElementById('carta-texto');
+const counter = document.getElementById('carta-contador');
 
 const estilo = ['newspaper', 'magazine1', 'magazine2'];
 const tamanho = ['medium', 'big', 'reallybig'];
@@ -28,6 +29,7 @@ function printLetter() {
   removeSpan();
   const letterText = letterInput.value;
   const stringsArr = letterText.split(' ');
+  counter.innerHTML = `Sua carta tem ${stringsArr.length} palavras.`;
   return stringsArr.forEach((word) => {
     const spanWord = document.createElement('span');
     spanWord.innerHTML = word;
