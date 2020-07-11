@@ -29,7 +29,7 @@ function printLetter() {
   removeSpan();
   const letterText = letterInput.value;
   const stringsArr = letterText.split(' ');
-  counter.innerHTML = `Sua carta tem ${stringsArr.length} palavras.`;
+  counter.innerHTML = stringsArr.length;
   return stringsArr.forEach((word) => {
     const spanWord = document.createElement('span');
     spanWord.innerHTML = word;
